@@ -30,7 +30,7 @@ if [ "$(uname -s)" = "Linux" ]; then
     fi
     # Set dircolors
     if [ -e "$HOME"/.dircolors ]; then
-      eval $(dircolors) "$HOME"/.dircolors
+      eval $(dircolors "$HOME"/.dircolors)
     fi
 # For Mac environment
 elif [ "$(uname -s )" = "Darwin" ]; then
