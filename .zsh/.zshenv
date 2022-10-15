@@ -28,6 +28,10 @@ if [ "$(uname -s)" = "Linux" ]; then
         (fcitx-autostart > /dev/null 2>&1 &)
         xset -r 49  > /dev/null 2>&1
     fi
+    # Set dircolors
+    if [ -e "$HOME"/.dircolors ]; then
+      eval $(dircolors) "$HOME"/.dircolors
+    fi
 # For Mac environment
 elif [ "$(uname -s )" = "Darwin" ]; then
     export PATH="$HOME/FISH:$PATH"
