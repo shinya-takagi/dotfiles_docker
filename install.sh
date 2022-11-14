@@ -25,9 +25,11 @@ ln -sf "$DOTFILE_DIR"/.config/nvim/setting/minimal_plugin.vim "$TARGET_DIR"/.con
 ln -sf "$DOTFILE_DIR"/.config/nvim/setting/plugin.vim "$TARGET_DIR"/.config/nvim/setting/plugin.vim
 ln -sf "$DOTFILE_DIR"/.config/nvim/setting/autocommand.vim "$TARGET_DIR"/.config/nvim/setting/autocommand.vim
 ln -sf "$DOTFILE_DIR"/.config/nvim/setting/general.vim "$TARGET_DIR"/.config/nvim/setting/general.vim
+# Neovim plugins
 for f in $(find "$DOTFILE_DIR"/.config/nvim/plugin); do
     ln -sf "$f" "$TARGET_DIR"/.config/nvim/plugin/
 done
+# Main setting
 for f in $(find "$DOTFILE_DIR"/.config/nvim/lua); do
     ln -sf "$f" "$TARGET_DIR"/.config/nvim/lua/
 done
