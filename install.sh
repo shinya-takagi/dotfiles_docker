@@ -45,3 +45,5 @@ ln -sf "$DOTFILE_DIR"/.zsh/.zprofile "$TARGET_DIR"/.zsh/.zprofile
 ln -sf "$DOTFILE_DIR"/.zsh/.zshenv "$TARGET_DIR"/.zsh/.zshenv 
 ln -sf "$DOTFILE_DIR"/.zsh/alias.zsh "$TARGET_DIR"/.zsh/alias.zsh
 
+# dircolors
+ln -sf "$DOTFILE_DIR"/.dircolors "$TARGET_DIR"/.dircolors
