@@ -11,18 +11,26 @@ ln -sf "$DOTFILE_DIR"/.config/git/ignore "$TARGET_DIR"/.config/git/ignore
 # Neovim
 mkdir -p "$TARGET_DIR"/.config/nvim/ftplugin
 mkdir -p "$TARGET_DIR"/.config/nvim/setting
+mkdir -p "$TARGET_DIR"/.config/nvim/lua
+mkdir -p "$TARGET_DIR"/.config/nvim/plugin
 mkdir -p "$TARGET_DIR"/.config/lvim/
-ln -sf "$DOTFILE_DIR$"/.config/nvim/ftplugin/fish.vim "$TARGET_DIR"/.config/nvim/ftplugin/fish.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/ftplugin/fortran.vim "$TARGET_DIR"/.config/nvim/ftplugin/fortran.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/ftplugin/python.vim "$TARGET_DIR"/.config/nvim/ftplugin/python.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/ftplugin/sh.vim "$TARGET_DIR"/.config/nvim/ftplugin/sh.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/ftplugin/tex.vim "$TARGET_DIR"/.config/nvim/ftplugin/tex.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/ftplugin/zsh.vim "$TARGET_DIR"/.config/nvim/ftplugin/zsh.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/init.vim "$TARGET_DIR"/.config/nvim/init.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/setting/minimal_plugin.vim "$TARGET_DIR"/.config/nvim/setting/minimal_plugin.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/setting/plugin.vim "$TARGET_DIR"/.config/nvim/setting/plugin.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/setting/autocommand.vim "$TARGET_DIR"/.config/nvim/setting/autocommand.vim
-ln -sf "$DOTFILE_DIR$"/.config/nvim/setting/general.vim "$TARGET_DIR"/.config/nvim/setting/general.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/ftplugin/fish.vim "$TARGET_DIR"/.config/nvim/ftplugin/fish.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/ftplugin/fortran.vim "$TARGET_DIR"/.config/nvim/ftplugin/fortran.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/ftplugin/python.vim "$TARGET_DIR"/.config/nvim/ftplugin/python.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/ftplugin/sh.vim "$TARGET_DIR"/.config/nvim/ftplugin/sh.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/ftplugin/tex.vim "$TARGET_DIR"/.config/nvim/ftplugin/tex.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/ftplugin/zsh.vim "$TARGET_DIR"/.config/nvim/ftplugin/zsh.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/init.vim "$TARGET_DIR"/.config/nvim/init.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/setting/minimal_plugin.vim "$TARGET_DIR"/.config/nvim/setting/minimal_plugin.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/setting/plugin.vim "$TARGET_DIR"/.config/nvim/setting/plugin.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/setting/autocommand.vim "$TARGET_DIR"/.config/nvim/setting/autocommand.vim
+ln -sf "$DOTFILE_DIR"/.config/nvim/setting/general.vim "$TARGET_DIR"/.config/nvim/setting/general.vim
+for f in $(find "$DOTFILE_DIR"/.config/nvim/plugin); do
+    ln -sf "$f" "$TARGET_DIR"/.config/nvim/plugin/
+done
+for f in $(find "$DOTFILE_DIR"/.config/nvim/lua); do
+    ln -sf "$f" "$TARGET_DIR"/.config/nvim/lua/
+done
 # Lunarvim (Improved neovim)
 ln -sf "$DOTFILE_DIR"/.config/lvim/config.lua "$TARGET_DIR"/.config/lvim/config.lua
 
