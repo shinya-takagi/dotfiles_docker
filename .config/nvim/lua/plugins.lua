@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use({ "lukas-reineke/indent-blankline.nvim" }) -- Show indent line blank
   use({ "rcarriga/nvim-notify" }) -- Show Notification popup
   use({ 'ethanholz/nvim-lastplace' }) -- Remember last position when it opened.
-  use({ 'hrsh7th/vim-vsnip'}) -- Snipet like VSCode
+  use({ 'hrsh7th/vim-vsnip' }) -- Snipet like VSCode
 
   -- LSP
   use({ "williamboman/mason.nvim" })

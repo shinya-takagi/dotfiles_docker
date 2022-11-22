@@ -44,6 +44,9 @@ local options = {
   -- When on, new window opens at a current window in right if you split a window vertically.
   splitright = false,
 }
+-- vim.g.python3_host_prog = "/usr/bin/python"
+-- Python Environment
+vim.g.python3_host_prog = vim.fn.system("which python")
 
 vim.opt.shortmess:append("c")
 
