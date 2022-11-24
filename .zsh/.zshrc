@@ -160,7 +160,7 @@ zinit load greymd/docker-zsh-completion  # Completion for docker
 [[ $(type gh > /dev/null 2>&1) ]] && eval "$(gh completion -s zsh)"
 
 #-----Display for Xserver------------->
-export DISPLAY=:0.0 
+# export DISPLAY=:0.0 
 #-----Xserver---------<
 
 # Dotfile manager "dot"
