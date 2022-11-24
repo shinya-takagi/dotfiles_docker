@@ -11,6 +11,7 @@ if [ "$(uname -s)" = "Linux" ]; then
     if type pyenv > /dev/null 2>&1; then
       eval "$(pyenv init -)"
     fi
+    export PIPEMV_VENV_IN_PROJECT=1 # Pipenv virtual env in project dirctory
     if [ -e /opt/intel/oneapi/setvars.sh ]; then
         source /opt/intel/oneapi/setvars.sh > /dev/null     # Intel Fortran/C++
     fi

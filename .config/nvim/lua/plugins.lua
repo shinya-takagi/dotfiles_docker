@@ -58,8 +58,15 @@ return packer.startup(function(use)
   use({ 'simrat39/symbols-outline.nvim' }) -- Show Symbol at outline
   use({ "lukas-reineke/indent-blankline.nvim" }) -- Show indent line blank
   use({ "rcarriga/nvim-notify" }) -- Show Notification popup
+  use({ 'folke/noice.nvim' }) -- Richment notice
+  use({ 'MunifTanjim/nui.nvim' }) -- UI Component
   use({ 'ethanholz/nvim-lastplace' }) -- Remember last position when it opened.
   use({ 'hrsh7th/vim-vsnip' }) -- Snipet like VSCode
+  -- Vim Compatibles
+  use({ 'machakann/vim-sandwich' }) -- Add operator surrounding
+  -- use({ 'thinca/vim-quickrun' }) -- Quickly run the code in buffer.
+  -- use({ 'lambdalisue/vim-quickrun-neovim-job' }) -- For neovim quickrun job
+  use({ 'is0n/jaq-nvim' }) -- Quickrun for neovim.
 
   -- LSP
   use({ "williamboman/mason.nvim" })
