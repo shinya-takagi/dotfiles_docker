@@ -6,6 +6,7 @@ lualine.setup {
   options = {
     globalstatus = true,
     -- theme = 'powerline_dark'
-    theme = 'molokai'
+    -- theme = 'molokai'
+    theme = 'nightfly'
   },
 }

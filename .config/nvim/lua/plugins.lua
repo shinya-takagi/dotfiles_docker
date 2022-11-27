@@ -67,6 +67,13 @@ return packer.startup(function(use)
   -- use({ 'thinca/vim-quickrun' }) -- Quickly run the code in buffer.
   -- use({ 'lambdalisue/vim-quickrun-neovim-job' }) -- For neovim quickrun job
   use({ 'is0n/jaq-nvim' }) -- Quickrun for neovim.
+  use({ 'CRAG666/code_runner.nvim', requires = 'nvim-lua/plenary.nvim' }) -- Code runner for Neovim
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
+  } -- Show Key binding
 
   -- LSP
   use({ "williamboman/mason.nvim" })
@@ -84,25 +91,57 @@ return packer.startup(function(use)
   use({ 'hrsh7th/cmp-path' }) -- path completions
   use({ 'hrsh7th/cmp-cmdline' }) -- command line completions
 
+  -- Linter formatter
+  use({ 'jose-elias-alvarez/null-ls.nvim' }) -- Linter and formatter
+
+  -- Git
+  use({
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }) -- Show git signs
+
   -- Status Line
   use({ 'nvim-lualine/lualine.nvim' }) -- Powerline fonts for neovim
   use({ 'kyazdani42/nvim-web-devicons' }) -- Various icons for neovim
+
+  -- Sidebar
+  use({ 'GustavoKatel/sidebar.nvim' }) -- Add sidebar
+
+  -- Scroll bar
+  use({ 'petertriho/nvim-scrollbar' }) -- Add scrollbar
+  use { 'kevinhwang91/nvim-hlslens' } -- Counts of highlight words
 
   -- Filer
   use({ 'kyazdani42/nvim-tree.lua' }) -- Neovim tree
 
   -- Fuzzy Finder
   use({ 'nvim-telescope/telescope.nvim' }) -- lua made in fuzzy finder
+  use {
+    "nvim-telescope/telescope-frecency.nvim",
+    config = function()
+      require "telescope".load_extension("frecency")
+    end,
+    requires = { "kkharji/sqlite.lua" }
+  } -- Extension of Telescope for search files
 
   -- Treesitter
   use({ 'nvim-treesitter/nvim-treesitter' }) -- Treesitter Engine
   use({ 'ray-x/cmp-treesitter' })
+  use({ 'JoosepAlviste/nvim-ts-context-commentstring' }) -- treesitter plugin show functions on cursor
 
   -- Screen
   use({ 'goolord/alpha-nvim' }) -- Custom menu
 
-  -- Lua
+  -- Terminal
+  use { "akinsho/toggleterm.nvim", config = function()
+    require("toggleterm").setup()
+  end } -- Improved builtin-Terminal
+
+  -- Specific Language
   use({ "folke/neodev.nvim" }) -- Develop for lua
+  use({ 'lervag/vimtex', ft = { "tex" } }) -- All-in-one LaTeX for vim/neovim
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

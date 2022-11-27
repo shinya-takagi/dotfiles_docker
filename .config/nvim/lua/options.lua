@@ -38,7 +38,7 @@ local options = {
   background = "dark",
   scrolloff = 8,
   sidescrolloff = 8,
-  guifont = "monospace:h17",
+  -- guifont = "monospace:h17",
   -- When on, new window opens at a current window in bottom if you split a window.
   splitbelow = false,
   -- When on, new window opens at a current window in right if you split a window vertically.
