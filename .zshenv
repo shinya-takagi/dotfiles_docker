@@ -1,5 +1,3 @@
 # zshenv
 
-export ZDOTDIR=$HOME/.zsh
-
-source "$ZDOTDIR"/.zshenv
+source $HOME/.zprofile
